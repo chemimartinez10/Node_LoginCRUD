@@ -1,0 +1,26 @@
+{
+  "name": "node_logincrud",
+  "version": "1.0.0",
+  "description": "Practice for a real app",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chemimartinez10/Node_LoginCRUD.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "MongoDB",
+    "Login",
+    "App",
+    "Notes"
+  ],
+  "author": "chemimartinez10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chemimartinez10/Node_LoginCRUD/issues"
+  },
+  "homepage": "https://github.com/chemimartinez10/Node_LoginCRUD#readme"
+}
