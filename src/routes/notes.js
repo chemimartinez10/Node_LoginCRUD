@@ -23,6 +23,7 @@ router.post('/notes/new-note', async (req , res) => {
     }else {
         const newNote = new Note({title, description})
         await newNote.save()
+        req.flash('success_msg', 'Note has been added successfully!')
         res.redirect('/notes')
     }
 })
@@ -57,7 +58,7 @@ router.post("/notes/edit", async (req, res) => {
   });
 });
 
-router.post('/notes/update', async (req , res) => {
+router.put('/notes/update', async (req , res) => {
     const {_id, title, description} = req.body
     const note = req.body
     const errors = []
@@ -73,16 +74,18 @@ router.post('/notes/update', async (req , res) => {
             errors, note
         })
     }else {
-        await Note.update({_id : _id}, req.body)
+        await Note.findByIdAndUpdate(_id, {title , description})
+        req.flash('success_msg', 'Note has been updated successfully!')
         res.redirect('/notes')
     }
 })
 
 //DELETE
 
-router.get('/notes/delete/:id', async (req, res) => {
+router.delete('/notes/delete/:id', async (req, res) => {
     const { id } = req.params
-    await Note.remove({_id: id})
+    await Note.findByIdAndDelete(id)
+    req.flash('success_msg', 'Note has been deleted successfully!')
     res.redirect('/notes')
 })
 
