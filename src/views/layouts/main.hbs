@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <p>Navegation</p>
+    {{>navigation}}
     
     <main class="container">
     {{> messages }}
+    {{> errors }}
+
     {{{ body }}}
 
     </main>
 
-    <p>Footer</p>
 
     {{!-- FONT-AWESOME --}}
     <script src="https://kit.fontawesome.com/dcf69bd97a.js" crossorigin="anonymous"></script>

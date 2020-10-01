@@ -1,1 +1,23 @@
-<h1>signIn</h1>
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card mt-4 text-center">
+            <div class="card-header">
+                <h1>Account login</h1>
+            </div>
+                <img src="/img/logo.png" class="logo rounded-circle mx-auto d-block m-4" alt="FaztLogo">
+            <div class="card-body">
+                <form action="/users/signin" method="post">
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn-block btn btn-success" type="submit">SignIn</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
